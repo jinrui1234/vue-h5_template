@@ -64,3 +64,7 @@ npm run build
     "build-only-development-fix": "cross-env NODE_ENV=production vite build --mode development-fix",
 }
 ```
+
+### Vant4 组件库
+
+- 使用 Vant4 组件库，轻松实现移动端项目的 UI 效果。
