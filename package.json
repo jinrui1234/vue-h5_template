@@ -29,6 +29,8 @@
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/tsconfig": "^0.5.1",
+    "autoprefixer": "^10.4.20",
+    "cnjm-postcss-px-to-viewport": "^1.0.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",

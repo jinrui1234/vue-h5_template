@@ -59,12 +59,22 @@ npm run build
 "scripts": {
   "dev": "vite",
   "build": "run-p type-check \"build-only-production {@}\"",
-    "build-fix": "run-p type-check \"build-only-development-fix {@}\"",
-    "build-only-production": "cross-env NODE_ENV=production vite build --mode production",
-    "build-only-development-fix": "cross-env NODE_ENV=production vite build --mode development-fix",
+  "build-fix": "run-p type-check \"build-only-development-fix {@}\"",
+  "build-only-production": "cross-env NODE_ENV=production vite build --mode production",
+  "build-only-development-fix": "cross-env NODE_ENV=production vite build --mode development-fix",
 }
 ```
 
 ### Vant4 组件库
 
 - 使用 Vant4 组件库，轻松实现移动端项目的 UI 效果。
+- 组件库文档：https://vant-ui.github.io/vant/#/zh-CN/home
+
+**Vant官方教程很详细，按步骤进行即可，这里不再赘述。**
+
+需要注意的点在于：
+
+- Viewport布局下，postcss-px-to-viewport 会导致 deprecated 的警告，需要安装 cnjm-postcss-px-to-viewport 进行替换。
+- 注意Vant的组件样式，对于750的设计稿需要单独处理
+
+### Tailwindcss 原子类框架
