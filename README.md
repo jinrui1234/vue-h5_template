@@ -1,3 +1,13 @@
+<!--
+ * @Author: 17714331167 changjun19920716@gmail.com
+ * @Date: 2024-09-13 11:49:48
+ * @LastEditors: 17714331167 changjun19920716@gmail.com
+ * @LastEditTime: 2024-09-14 15:51:37
+ * @FilePath: /vue3-ts-h5-template/README.md
+ * @Description:
+ * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
+-->
+
 **🌱 基于 Vue3 全家桶、TS/JS、Vite 构建工具，开箱即用的移动端项目基础模板**
 
 - [x] ⚡ Vue3 + Vite5
@@ -5,6 +15,9 @@
 - [x] ✨ 全局环境变量
 - [x] 🎨 Vant4 组件库
 - [x] 🌀 Tailwindcss 原子类框架
+- [x] 🌈 自动化代码格式化 + ESLint
+- [x] 👏 页面标题自动切换
+- [x] 🚀 自动化部署
 
 ## 目录结构
 
