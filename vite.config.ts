@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-14 17:11:51
+ * @LastEditTime: 2024-09-14 19:46:10
  * @FilePath: /vue3-ts-h5-template/vite.config.ts
  * @Description:
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved.
@@ -20,6 +20,7 @@ import { VantResolver } from '@vant/auto-import-resolver';
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
+
   return defineConfig({
     plugins: [
       vue(),
