@@ -4,7 +4,9 @@
     "src/types/env.d.ts",
     "src/**/*",
     "src/**/*.vue",
-    "vite-env.d.ts"
+    "vite-env.d.ts",
+    "mock/*.ts",
+    "mock"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {

@@ -2,7 +2,7 @@
  * @Author: changjun anson1992@163.com
  * @Date: 2023-04-14 20:28:41
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-14 20:05:16
+ * @LastEditTime: 2024-09-19 20:02:46
  * @FilePath: /vue3-ts-h5-template/src/utils/http/index.ts
  * @Description: 基于axios的接口请求实现类
  */
@@ -13,10 +13,9 @@ import Axios, {
   AxiosError
 } from 'axios';
 import Qs from 'qs';
-import { type RequestOptions } from './types';
+import { type RequestOptions, type THttpResponse } from './types';
 import { ContentTypeEnum, ResultEnum } from './http-enum';
 import { checkStatus } from './check-status';
-import { type THttpResponse } from '../../types/common';
 import { showDialog, showLoadingToast, closeToast } from 'vant';
 // 是否为本地开发环境
 const isDev = import.meta.env.MODE === 'development';
@@ -76,11 +75,6 @@ class IAxios {
     this.instance = Axios.create();
     const _conf: AxiosRequestConfig = JSON.parse(JSON.stringify(configs));
     const _opts: RequestOptions = Object.assign({}, this.options, options);
-    // 格式化接口地址，兼容第三方接口
-    _conf.url =
-      _conf?.url?.startsWith('http://') || _conf?.url?.startsWith('https://')
-        ? _conf?.url
-        : `${location.origin}/${_conf?.url}`;
     const {
       contentType,
       isShowErrorMessage,
@@ -104,6 +98,7 @@ class IAxios {
         'Content-Type': contentType
       };
     }
+    this.instance.defaults.baseURL = import.meta.env.VITE_APP_BASE_API;
     // 是否需要设置超时时长
     if (isTimeout) {
       this.instance.defaults.timeout = timeoutNumber;
@@ -211,6 +206,6 @@ const Http = new IAxios({
   serverErrorMessage: '',
   timeoutNumber: 500000,
   ignorePendingRequest: true,
-  ignoreLoading: true
+  ignoreLoading: false
 });
 export default Http;

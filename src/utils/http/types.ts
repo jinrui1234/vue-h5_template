@@ -1,7 +1,7 @@
 /*
  * @Author: Anson
  * @Date: 2022-04-02 16:54:26
- * @LastEditTime: 2024-09-14 20:06:40
+ * @LastEditTime: 2024-09-18 17:16:16
  * @LastEditors: 17714331167 changjun19920716@gmail.com
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /vue3-ts-h5-template/src/utils/http/types.ts
@@ -54,4 +54,50 @@ export interface DataParams<T = any> {
   total?: number;
   size?: number;
   current?: number;
+}
+
+/**
+ * @description Axios Request返回体
+ * @param {number} code 错误码
+ * @param {string} message 提示信息
+ * @param {any} data 返回数据
+ */
+export type THttpResponse<T = TDict> = {
+  code: number;
+  message: string;
+  data: T;
+};
+/**
+ * Data 列表返回体
+ */
+export type THttpDataResponse<T> = {
+  records: Array<T>;
+  total: number;
+  size: number;
+  current: number;
+};
+
+export type THttpDataResponseByCode<T> = {
+  rows: never[];
+  code: number;
+  records: Array<T>;
+  total: number;
+  size: number;
+  current: number;
+};
+/**
+ * @description 节流
+ * @param {function} fn 函数
+ */
+export interface IThrottleFunction<F extends TFunc> {
+  (this: ThisParameterType<F>, ...args: Parameters<F>): void;
+}
+/**
+ * @description 防抖
+ * @param {function} fn 函数
+ * @param {function} cancel 取消回调
+ */
+export interface IDebounceFunction<F extends TFunc> {
+  (this: ThisParameterType<F>, ...args: Parameters<F>): void;
+  cancel: () => void;
 }

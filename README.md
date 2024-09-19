@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-14 17:37:46
+ * @LastEditTime: 2024-09-19 20:07:09
  * @FilePath: /vue3-ts-h5-template/README.md
  * @Description:
  * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
@@ -14,10 +14,14 @@
 - [x] 🍕 TypeScript
 - [x] ✨ 全局环境变量
 - [x] 🎨 Vant4 组件库
+- [x] 🎨 vw 窗口适配
 - [x] 🌀 Tailwindcss 原子类框架
-- [x] 🌈 自动化代码格式化 + ESLint
+- [x] 🌈 Pettier+ ESLint 统一代码风格
 - [x] 👏 页面标题自动切换
 - [x] 🚀 自动化部署
+- [x] 🌈 Mock 实现数据模拟
+- [x] 🚀 封装Axios请求库
+- [x] 🌈 封装Utils常用工具函数
 
 ## 目录结构
 

@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-14 19:46:10
+ * @LastEditTime: 2024-09-18 18:07:03
  * @FilePath: /vue3-ts-h5-template/vite.config.ts
  * @Description:
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved.
@@ -16,6 +16,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from '@vant/auto-import-resolver';
+import mockDevServerPlugin from 'vite-plugin-mock-dev-server';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -25,6 +26,7 @@ export default defineConfig(({ mode }) => {
     plugins: [
       vue(),
       vueJsx(),
+      mockDevServerPlugin(),
       // vueDevTools(),
       AutoImport({
         resolvers: [VantResolver()]
@@ -36,6 +38,14 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url))
+      }
+    },
+    server: {
+      host: true,
+      proxy: {
+        '^/dev-api': {
+          target: ''
+        }
       }
     }
   });
