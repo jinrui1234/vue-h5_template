@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-19 20:40:15
+ * @LastEditTime: 2024-09-20 11:28:57
  * @FilePath: /vue3-ts-h5-template/src/views/home.vue
  * @Description:
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved.
@@ -49,17 +49,3 @@ const handleList = () => {
     </cell-group>
   </div>
 </template>
-
-<style lang="less" scoped>
-.home-view {
-  background: linear-gradient(
-    180deg,
-    rgba(197, 220, 255, 0.7) 0%,
-    #f7f8fb 100%
-  );
-  :root:root {
-    --van-cekk-background: transparent;
-    --van-cell-group-background: transparent;
-  }
-}
-</style>
