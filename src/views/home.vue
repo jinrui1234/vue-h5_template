@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-20 11:28:57
+ * @LastEditTime: 2024-09-20 18:11:14
  * @FilePath: /vue3-ts-h5-template/src/views/home.vue
  * @Description:
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved.
@@ -34,9 +34,9 @@ const handleList = () => {
 </script>
 
 <template>
-  <div class="home-view min-h-[100vh] w-full h-auto py-[48px]">
+  <div class="home-view min-h-[100vh] w-full h-auto py-[12px]">
     <div
-      class="my-[48px] px-[48px] w-full text-center flex justify-center items-center"
+      class="mt-[12px] mb-[32px] px-[48px] w-full text-center flex justify-center items-center"
     >
       <img src="../assets/logo.webp" class="w-[240px]" />
     </div>
