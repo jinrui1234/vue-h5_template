@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-19 20:07:09
+ * @LastEditTime: 2024-09-21 12:23:06
  * @FilePath: /vue3-ts-h5-template/README.md
  * @Description:
  * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
@@ -22,6 +22,7 @@
 - [x] 🌈 Mock 实现数据模拟
 - [x] 🚀 封装Axios请求库
 - [x] 🌈 封装Utils常用工具函数
+- [x] 🍕 Pinia状态管理库
 
 ## 目录结构
 
