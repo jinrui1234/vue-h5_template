@@ -15,3 +15,34 @@ body,
   padding: 0;
   font-weight: normal;
 }
+.spinner-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  .spinner-icon {
+    position: relative;
+    width: 88px;
+    height: 88px;
+    background-color: var(--van-tabbar-item-active-color);
+    animation: cube-shadow-spinner 1.8s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+  }
+}
+
+@keyframes cube-shadow-spinner {
+  50% {
+    border-radius: 50%;
+    transform: scale(0.5) rotate(360deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(720deg);
+  }
+}

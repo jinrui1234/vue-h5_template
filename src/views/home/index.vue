@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-25 11:39:56
+ * @LastEditTime: 2024-09-25 11:48:49
  * @FilePath: /vue3-ts-h5-template/src/views/home/index.vue
  * @Description:
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved.
@@ -12,7 +12,7 @@ import { Cell, CellGroup } from 'vant';
 import { reactive } from 'vue';
 
 const columnList = reactive([
-  '✔ ⚡ Vue3 + Vite5',
+  '✔ ⚡ Vue3 + Vite5 + Vuex',
   '✔ 🍕 TypeScript',
   '✔ ✨ 全局环境变量',
   '✔ 🎨 Vant4 组件库',
