@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-25 11:18:39
+ * @LastEditTime: 2024-09-25 11:39:56
  * @FilePath: /vue3-ts-h5-template/src/views/home/index.vue
  * @Description:
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved.
@@ -23,7 +23,8 @@ const columnList = reactive([
   '✔ 🚀 自动化部署',
   '✔ 🌈 Mock 实现数据模拟',
   '✔ 🚀 封装Axios请求库',
-  '✔ 🌈 封装Utils常用工具函数'
+  '✔ 🌈 封装Utils常用工具函数',
+  '✔ 🚀 打包资源GZIP压缩'
 ]);
 </script>
 

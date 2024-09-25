@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-18 18:07:03
+ * @LastEditTime: 2024-09-25 11:45:38
  * @FilePath: /vue3-ts-h5-template/vite.config.ts
  * @Description:
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved.
@@ -17,6 +17,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from '@vant/auto-import-resolver';
 import mockDevServerPlugin from 'vite-plugin-mock-dev-server';
+import compressionViteCompression from 'vite-plugin-compression';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -33,6 +34,13 @@ export default defineConfig(({ mode }) => {
       }),
       Components({
         resolvers: [VantResolver()]
+      }),
+      // GZIP压缩
+      compressionViteCompression({
+        threshold: 10240, // 对超过10k的资源进行压缩
+        algorithm: 'gzip',
+        ext: '.gz',
+        deleteOriginFile: false
       })
     ],
     resolve: {
