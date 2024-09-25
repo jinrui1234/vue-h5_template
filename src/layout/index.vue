@@ -20,8 +20,6 @@ const cacheViewList = computed(() => {
 });
 // 取loading状态
 const loading = computed(() => {
-  console.log(store.getters['loading/getLoading'], 999);
-
   return store.getters['loading/getLoading'];
 });
 // 主题变量
