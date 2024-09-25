@@ -2,17 +2,18 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-20 10:36:55
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-25 15:55:46
+ * @LastEditTime: 2024-09-25 22:01:03
  * @FilePath: /vue3-ts-h5-template/src/layout/index.vue
  * @Description: 框架布局组件
  * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
 -->
 <script setup lang="ts" name="LayoutView">
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import NavBar from './component/nav-bar/index.vue';
 import Tabbar from './component/tab-bar/index.vue';
 import { ConfigProvider } from 'vant';
 import { useStore } from 'vuex';
+import { ThemeModeEnum } from '../stores/modules/theme-mode';
 const store = useStore();
 // 取出缓存的路由列表
 const cacheViewList = computed(() => {
@@ -24,14 +25,21 @@ const cacheViewList = computed(() => {
 const loading = computed(() => {
   return store.getters['loading/getLoading'];
 });
-// 主题变量
+// 主题
+const themeMode = computed(() => {
+  return store.getters['themeMode/getThemeMode'];
+});
+// 特定变量
 const themeVars = {
   navBarBackground: 'transparent'
 };
+onMounted(() => {
+  store.dispatch('themeMode/setChangeThemeMode', ThemeModeEnum.DARK);
+});
 </script>
 <template>
   <div class="layout-view w-full h-full relative">
-    <config-provider :theme-vars="themeVars">
+    <config-provider :theme-vars="themeVars" :theme="themeMode">
       <NavBar />
       <div class="layout-body">
         <template v-if="cacheViewList && cacheViewList.length > 0">

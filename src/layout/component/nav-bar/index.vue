@@ -2,11 +2,30 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-20 10:37:24
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-25 11:26:22
+ * @LastEditTime: 2024-09-25 22:00:50
  * @FilePath: /vue3-ts-h5-template/src/layout/component/nav-bar/index.vue
  * @Description: 顶部导航栏
  * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
 -->
+<script setup lang="ts" name="NavBarView">
+import { computed } from 'vue';
+import { NavBar, Icon } from 'vant';
+import { useStore } from 'vuex';
+import { ThemeModeEnum } from '../../../stores/modules/theme-mode';
+const store = useStore();
+const currentThemeMode = computed(
+  () => store.getters['themeMode/getThemeMode']
+);
+// 切换主题模式
+const handleChangeTheme = () => {
+  store.dispatch(
+    'themeMode/setChangeThemeMode',
+    currentThemeMode.value === ThemeModeEnum.LIGHT
+      ? ThemeModeEnum.DARK
+      : ThemeModeEnum.LIGHT
+  );
+};
+</script>
 <template>
   <nav-bar
     class="nav-bar-view"
@@ -16,10 +35,7 @@
     :border="false"
   >
     <template #right>
-      <icon name="user-o" class="search-icon" size="20px" />
+      <icon name="star" size="24px" @click="handleChangeTheme" />
     </template>
   </nav-bar>
 </template>
-<script setup lang="ts" name="NavBarView">
-import { NavBar, Icon } from 'vant';
-</script>
