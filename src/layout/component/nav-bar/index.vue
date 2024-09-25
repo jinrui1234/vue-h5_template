@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-20 10:37:24
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-25 22:00:50
+ * @LastEditTime: 2024-09-25 22:33:43
  * @FilePath: /vue3-ts-h5-template/src/layout/component/nav-bar/index.vue
  * @Description: 顶部导航栏
  * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
@@ -17,13 +17,8 @@ const currentThemeMode = computed(
   () => store.getters['themeMode/getThemeMode']
 );
 // 切换主题模式
-const handleChangeTheme = () => {
-  store.dispatch(
-    'themeMode/setChangeThemeMode',
-    currentThemeMode.value === ThemeModeEnum.LIGHT
-      ? ThemeModeEnum.DARK
-      : ThemeModeEnum.LIGHT
-  );
+const handleChangeTheme = (event: MouseEvent | TouchEvent) => {
+  store.dispatch('themeMode/setChangeThemeMode', event);
 };
 </script>
 <template>
