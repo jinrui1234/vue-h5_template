@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-23 22:25:55
+ * @LastEditTime: 2024-09-25 11:18:39
  * @FilePath: /vue3-ts-h5-template/src/views/home/index.vue
  * @Description:
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved.
@@ -10,7 +10,6 @@
 <script setup lang="ts" name="HomeView">
 import { Cell, CellGroup } from 'vant';
 import { reactive } from 'vue';
-import { getLists } from '@/api/mock';
 
 const columnList = reactive([
   '✔ ⚡ Vue3 + Vite5',
@@ -37,8 +36,8 @@ const columnList = reactive([
     </div>
     <div class="px-[32px] my-[24px]">
       <p class="text-[28px] py-[24px] px-[20px] rounded-[8px] mt-[28px]">
-        🌱 基于 Vue3.5 全家桶、TypeScript、Vite、Vant、Less、Tailwindcss
-        构建工具，开箱即用的 H5 移动端项目基础模板
+        🌼🌼🌼 基于 Vue3.5 全家桶、TypeScript、Vite、Vant、Less、Tailwindcss
+        构建工具，开箱即用的 H5 移动端项目基础模板。 🌼🌼🌼
       </p>
     </div>
     <cell-group :border="false" inset>
