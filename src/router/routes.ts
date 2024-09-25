@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-14 15:43:43
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-23 22:32:55
+ * @LastEditTime: 2024-09-25 18:39:48
  * @FilePath: /vue3-ts-h5-template/src/router/routes.ts
  * @Description: 路由文件
  * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
@@ -20,7 +20,8 @@ export const routes: RouteRecordRaw[] = [
         name: 'home',
         component: () => import('../views/home/index.vue'),
         meta: {
-          title: '首页'
+          title: '首页',
+          keepAlive: true
         }
       },
       {
