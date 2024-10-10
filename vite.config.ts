@@ -2,22 +2,21 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-25 11:45:38
+ * @LastEditTime: 2024-09-26 19:03:22
  * @FilePath: /vue3-ts-h5-template/vite.config.ts
  * @Description:
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved.
  */
 import { fileURLToPath, URL } from 'node:url';
-
 import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-// import vueDevTools from 'vite-plugin-vue-devtools'
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from '@vant/auto-import-resolver';
 import mockDevServerPlugin from 'vite-plugin-mock-dev-server';
 import compressionViteCompression from 'vite-plugin-compression';
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -41,6 +40,12 @@ export default defineConfig(({ mode }) => {
         algorithm: 'gzip',
         ext: '.gz',
         deleteOriginFile: false
+      }),
+      createSvgIconsPlugin({
+        symbolId: 'icon-[dir]-[name]',
+        iconDirs: [
+          fileURLToPath(new URL('./src/assets/icons', import.meta.url))
+        ]
       })
     ],
     resolve: {
