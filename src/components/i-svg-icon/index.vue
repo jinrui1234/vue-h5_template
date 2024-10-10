@@ -2,12 +2,12 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-26 18:41:47
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-26 19:21:55
+ * @LastEditTime: 2024-10-10 13:52:28
  * @FilePath: /vue3-ts-h5-template/src/components/i-svg-icon/index.vue
  * @Description:  svg component
  * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
 -->
-<script setup lang="ts" name="IIcon">
+<script setup lang="ts" name="ISvgIcon">
 import { defineProps, computed } from 'vue';
 const props = defineProps({
   name: {
@@ -21,7 +21,7 @@ const props = defineProps({
   }, // 前缀
   color: {
     type: String,
-    default: '#fc4a14'
+    default: '#333333'
   }, // 颜色
   size: {
     type: Number,
@@ -29,13 +29,10 @@ const props = defineProps({
   } // 大小
 });
 // svg 图标名称
-const symbolId = computed(() => `${props.prefix}-${props.name}`);
+const symbolId = computed(() => `#${props.prefix}-${props.name}`);
 </script>
 <template>
   <svg aria-hidden="true" :width="size + 'px'" :height="size + 'px'">
-    <use :xlink:href="symbolId" :fill="props.color" />
+    <use :href="symbolId" :fill="props.color" />
   </svg>
-  <!-- <svg aria-hidden="true" :width="size + 'px'" :height="size + 'px'">
-    <use :xlink-href="symbolId" :fill="props.color"></use>
-  </svg> -->
 </template>
