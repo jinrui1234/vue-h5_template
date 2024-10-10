@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-25 19:13:26
+ * @LastEditTime: 2024-10-10 14:50:51
  * @FilePath: /vue3-ts-h5-template/src/views/home/index.vue
  * @Description:
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved.
@@ -16,17 +16,18 @@ const columnList = reactive([
   '✔ 🍕 TypeScript',
   '✔ ✨ 全局环境变量',
   '✔ 🎨 Vant4 组件库',
-  '✔ 🎨 vw 窗口适配',
+  '✔ 🎊 vw 窗口适配',
   '✔ 🌀 Tailwindcss 原子类框架',
   '✔ 🌈 Pettier+ ESLint 统一代码风格',
   '✔ 👏 页面标题自动切换',
   '✔ 🚀 自动化部署',
-  '✔ 🌈 Mock 实现数据模拟',
-  '✔ 🚀 封装Axios请求库',
-  '✔ 🌈 封装Utils常用工具函数',
+  '✔ 🕹 Mock 实现数据模拟',
+  '✔ 🎁 封装Axios请求库',
+  '✔ 🌈 本地SVG图标库封装SVG-ICON组件',
+  '✔ 🧭 封装Utils常用工具函数',
   '✔ 🚀 打包资源GZIP压缩',
   '✔ 🌈 全屏加载动画 loading',
-  '✔ 🌈 浏览器回退Keep-Alive 页面状态保持'
+  '✔ 🧸 浏览器回退Keep-Alive 页面状态保持'
 ]);
 </script>
 

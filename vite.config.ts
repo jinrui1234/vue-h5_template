@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-10-10 11:18:29
+ * @LastEditTime: 2024-10-10 14:59:42
  * @FilePath: /vue3-ts-h5-template/vite.config.ts
  * @Description:
  * Copyright (c) 2024 by ${git_name_email}, All Rights Reserved.
@@ -21,8 +21,6 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 
 // 当前工作目录路径
 const root: string = process.cwd();
-console.log('当前工作目录路径:', root);
-
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, root);
@@ -53,6 +51,16 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url))
+      }
+    },
+    build: {
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          // 生产环境时移除console
+          drop_console: ['log', 'info'],
+          drop_debugger: true
+        }
       }
     },
     server: {

@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-21 12:23:06
+ * @LastEditTime: 2024-10-10 15:17:15
  * @FilePath: /vue3-ts-h5-template/README.md
  * @Description:
  * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
@@ -10,19 +10,21 @@
 
 **🌱 基于 Vue3 全家桶、TS/JS、Vite 构建工具，开箱即用的移动端项目基础模板**
 
-- [x] ⚡ Vue3 + Vite5
+- [x] ⚡ Vue3 + Vite5 + Vuex
 - [x] 🍕 TypeScript
 - [x] ✨ 全局环境变量
 - [x] 🎨 Vant4 组件库
-- [x] 🎨 vw 窗口适配
+- [x] 🎊 vw 窗口适配
 - [x] 🌀 Tailwindcss 原子类框架
 - [x] 🌈 Pettier+ ESLint 统一代码风格
 - [x] 👏 页面标题自动切换
 - [x] 🚀 自动化部署
-- [x] 🌈 Mock 实现数据模拟
-- [x] 🚀 封装Axios请求库
-- [x] 🌈 封装Utils常用工具函数
-- [x] 🍕 Pinia状态管理库
+- [x] 🕹 Mock 实现数据模拟
+- [x] 🎁 封装Axios请求库
+- [x] 🧭 封装Utils常用工具函数
+- [x] 🍕 打包资源GZIP压缩
+- [x] 🏀 自定义全屏加载动画 loading
+- [x] 🧸 浏览器回退Keep-Alive 页面状态保持
 
 ## 目录结构
 
@@ -30,19 +32,29 @@
 ├── dist
 ├── public
 ├── src
+│   ├── api
 │   ├── assets
 │   ├── components
-│   ├── pages
+│   ├── layout
+│   ├── types
 │   ├── router
-│   ├── store
+│   ├── stores
 │   ├── styles
 │   ├── utils
+│   ├── views
 │   ├── App.vue
 │   ├── main.ts
 │   └── shims-vue.d.ts
-├── .env.development.local
-├── .env.production.local
-├── .env.staging.local
+├──  .env
+├──  .env.development
+├──  .env.development-fix
+├──  .env.production
+├──  .gitignore
+├──  index.html
+├──  .prettierrc.js
+├──  postcss.config.js
+├──  tsconfig.json
+├──  tailwind.config.js
 ├──  package.json
 ├──  vite.config.ts
 └──  README.md
