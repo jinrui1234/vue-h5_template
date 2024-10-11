@@ -2,7 +2,7 @@
  * @Author: changjun anson1992@163.com
  * @Date: 2023-04-14 20:28:41
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-09-19 20:02:46
+ * @LastEditTime: 2024-10-11 20:02:21
  * @FilePath: /vue3-ts-h5-template/src/utils/http/index.ts
  * @Description: 基于axios的接口请求实现类
  */
@@ -112,8 +112,7 @@ class IAxios {
           addPendingRequest(config);
         }
         return config;
-      },
-      undefined
+      }
     );
     // response拦截器
     this.instance.interceptors.response.use(

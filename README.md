@@ -2,7 +2,7 @@
  * @Author: 17714331167 changjun19920716@gmail.com
  * @Date: 2024-09-13 11:49:48
  * @LastEditors: 17714331167 changjun19920716@gmail.com
- * @LastEditTime: 2024-10-10 15:17:15
+ * @LastEditTime: 2024-10-11 20:15:18
  * @FilePath: /vue3-ts-h5-template/README.md
  * @Description:
  * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
@@ -18,13 +18,14 @@
 - [x] 🌀 Tailwindcss 原子类框架
 - [x] 🌈 Pettier+ ESLint 统一代码风格
 - [x] 👏 页面标题自动切换
-- [x] 🚀 自动化部署
+- [] 🚀 自动化部署
 - [x] 🕹 Mock 实现数据模拟
 - [x] 🎁 封装Axios请求库
 - [x] 🧭 封装Utils常用工具函数
 - [x] 🍕 打包资源GZIP压缩
 - [x] 🏀 自定义全屏加载动画 loading
 - [x] 🧸 浏览器回退Keep-Alive 页面状态保持
+- [x] 🌈 主题切换
 
 ## 目录结构
 
@@ -87,11 +88,15 @@ npm run build
 
 ```json
 "scripts": {
-  "dev": "vite",
-  "build": "run-p type-check \"build-only-production {@}\"",
-  "build-fix": "run-p type-check \"build-only-development-fix {@}\"",
-  "build-only-production": "cross-env NODE_ENV=production vite build --mode production",
-  "build-only-development-fix": "cross-env NODE_ENV=production vite build --mode development-fix",
+   "dev": "vite",
+    "build": "run-p type-check \"build-only-production {@}\"",
+    "build-fix": "run-p type-check \"build-only-development-fix {@}\"",
+    "preview": "vite preview",
+    "build-only-production": "cross-env NODE_ENV=production vite build --mode production",
+    "build-only-development-fix": "cross-env NODE_ENV=production vite build --mode development-fix",
+    "type-check": "vue-tsc --build --force",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
 }
 ```
 
@@ -108,3 +113,15 @@ npm run build
 - 注意Vant的组件样式，对于750的设计稿需要单独处理
 
 ### Tailwindcss 原子类框架
+
+- 使用 Tailwindcss 原子类框架，轻松实现移动端项目的 UI 效果。
+- 文档：https://tailwindcss.com/docs/installation
+
+项目中的tail
+
+**Tailwindcss官方教程很详细，按步骤进行即可，这里不再赘述。**
+
+### vw 窗口适配
+
+- 使用 vw 窗口适配，实现移动端项目的适配。
+- 文档：https://github.com/amfe/lib-flexible
