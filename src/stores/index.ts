@@ -10,15 +10,12 @@
 import { createStore, createLogger } from 'vuex';
 import createPersistedState from 'vuex-persistedstate';
 import { name } from '../../package.json';
-import cachedView from './modules/cached-view';
-import loading from './modules/loading';
-import themeMode from './modules/theme-mode';
+import user from './modules/user';
+
 const store = createStore({
   strict: true, // 严格模式
   modules: {
-    cachedView,
-    loading,
-    themeMode
+    user
   },
   plugins: [
     createPersistedState({

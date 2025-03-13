@@ -13,9 +13,7 @@ import {
   type RouteLocationNormalized
 } from 'vue-router';
 import { routes } from './routes';
-import { setPageTitle } from '@/utils/set-page-title';
 import NProgress from '@/utils/progress';
-import store from '../stores';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,11 +23,7 @@ const router = createRouter({
     if (savedPosition && to.meta.keepAlive) {
       return savedPosition;
     }
-    if (!store.getters['cachedView/getCachedView'].includes(to.name)) {
-      return { top: 0 };
-    } else {
-      return { top: savedPosition?.top || 0 };
-    }
+    return { top: savedPosition?.top || 0 };
   }
 });
 
@@ -42,18 +36,11 @@ export interface toRouteModel extends RouteLocationNormalized {
 
 router.beforeEach((to: toRouteModel, from, next) => {
   NProgress.start();
-  store.commit('loading/SET_LOADING', true);
-  // 设置页面标题
-  setPageTitle(to.meta.title);
   next();
 });
+
 router.afterEach((to: toRouteModel) => {
-  // 缓存页面keep-alive
-  store.dispatch('cachedView/setAddCachedView', to);
   NProgress.done();
-  setTimeout(() => {
-    store.commit('loading/SET_LOADING', false);
-  }, 500);
 });
 
 export default router;
