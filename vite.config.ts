@@ -53,7 +53,9 @@ export default defineConfig(({ mode }) => {
         '@': fileURLToPath(new URL('./src', import.meta.url))
       }
     },
+    base: '/h5',
     build: {
+      outDir: 'h5',
       minify: 'terser',
       terserOptions: {
         compress: {

@@ -9,14 +9,14 @@
  */
 import {
   createRouter,
-  createWebHistory,
+  createWebHashHistory,
   type RouteLocationNormalized
 } from 'vue-router';
 import { routes } from './routes';
 import NProgress from '@/utils/progress';
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: routes,
   scrollBehavior(to, from, savedPosition) {
     // 解决浏览器回退后页面顶部位置丢失问题

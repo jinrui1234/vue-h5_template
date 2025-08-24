@@ -8,6 +8,31 @@
  * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
 -->
 
+<!-- https://www.renshengdaoshi.com/
+{
+"name": "47.103.197.242",
+"host": "47.103.197.242",
+"protocol": "sftp",
+"port": 22,
+"username": "root",
+"remotePath": "/mnt/service/html/renshengdaoshi",
+"uploadOnSave": false,
+"useTempFile": false,
+"openSsh": false
+}
+
+{
+"name": "8.133.245.132",
+"host": "8.133.245.132",
+"protocol": "sftp",
+"port": 22,
+"username": "root",
+"remotePath": "/mnt/service/html/renshengdaoshi",
+"uploadOnSave": false,
+"useTempFile": false,
+"openSsh": false
+} -->
+
 **🌱 基于 Vue3 全家桶、TS/JS、Vite 构建工具，开箱即用的移动端项目基础模板**
 
 - [x] ⚡ Vue3 + Vite5 + Vuex

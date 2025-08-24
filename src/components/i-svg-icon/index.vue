@@ -8,7 +8,7 @@
  * Copyright (c) 2024 by ${17714331167}, All Rights Reserved.
 -->
 <script setup lang="ts" name="ISvgIcon">
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
 const props = defineProps({
   name: {
     type: String,
